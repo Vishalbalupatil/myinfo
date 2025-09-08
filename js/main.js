@@ -1,17 +1,7 @@
 (function ($) {
 	"use strict";
-        var nav = $('nav');
+	var nav = $('nav');
   var navHeight = nav.outerHeight();
-
-  if (localStorage.getItem('dark-mode') === 'true') {
-    $('body').addClass('dark-mode');
-  }
-
-  $('#darkModeToggle').on('click', function (e) {
-    e.preventDefault();
-    $('body').toggleClass('dark-mode');
-    localStorage.setItem('dark-mode', $('body').hasClass('dark-mode'));
-  });
   
   $('.navbar-toggler').on('click', function() {
     if( ! $('#mainNav').hasClass('navbar-reduce')) {
