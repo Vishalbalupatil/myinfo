@@ -2,825 +2,344 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>VISHAL PATIL</title>
+  <title>VISHAL PATIL | AI & Web3 Engineer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-      <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <!-- Favicons -->
+  <meta name="description" content="Vishal Patil - Futuristic Portfolio bridging AI and Web3">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Favicon -->
   <link href="img/vishal.png" rel="icon">
-  <link href="img/vishal.png" rel="apple-touch-icon">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  
+  <!-- Main Stylesheet -->
+  <link href="css/futuristic.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-text">INITIALIZING</div>
+    </div>
+  </div>
 
-  <!--/ Nav Star /-->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-       <a class="navbar-brand" href="index.html"><span class="First">🔱</span></a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>VP<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">EXPERIENCE</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
   </nav>
-  <!--/ Nav End /-->
 
-  <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg1.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h1 class="display-6 color-d">Hi,</h1>
-          <h1 class="intro-title mb-4"> I'm Vishal Patil.</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Software Test Engineer. ,Data Science Enthusiast. ,Explorer. </span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="home" class="hero-section">
+    <div class="hero-split">
+      <!-- AI Side -->
+      <div class="hero-half ai-side">
+        <div class="hero-half-overlay"></div>
+        <div class="hero-half-content" data-aos="fade-right" data-aos-duration="1200">
+          <div class="domain-icon">
+            <svg viewBox="0 0 100 100" class="ai-brain-svg">
+              <circle cx="50" cy="35" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 35 Q32 55 50 65 Q68 55 68 35" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="42" cy="30" r="2" fill="currentColor"/>
+              <circle cx="58" cy="30" r="2" fill="currentColor"/>
+              <line x1="50" y1="65" x2="50" y2="85" stroke="currentColor" stroke-width="2"/>
+              <line x1="50" y1="75" x2="38" y2="82" stroke="currentColor" stroke-width="2"/>
+              <line x1="50" y1="75" x2="62" y2="82" stroke="currentColor" stroke-width="2"/>
+              <circle cx="30" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+              <circle cx="70" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+              <circle cx="25" cy="45" r="3" fill="currentColor" opacity="0.5"/>
+              <circle cx="75" cy="45" r="3" fill="currentColor" opacity="0.5"/>
+              <line x1="30" y1="20" x2="42" y2="30" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <line x1="70" y1="20" x2="58" y2="30" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <line x1="25" y1="45" x2="36" y2="40" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <line x1="75" y1="45" x2="64" y2="40" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+            </svg>
+          </div>
+          <h2 class="domain-label">ARTIFICIAL INTELLIGENCE</h2>
+          <p class="domain-desc">Machine Learning | Deep Learning | NLP | Computer Vision | AI Automation</p>
+        </div>
+        <div class="floating-elements">
+          <div class="float-item float-1">ML</div>
+          <div class="float-item float-2">DL</div>
+          <div class="float-item float-3">NLP</div>
+          <div class="float-item float-4">CV</div>
         </div>
       </div>
-    </div>
-  </div>
-  <!--/ Intro Skew End /-->
 
-  <section id="about" class="about-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-sm-6 col-md-5">
-                    <div class="about-img">
-                      <img src="img/ABC.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-7">
-                    <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>Vishal Patil</span></p>
-                      <p><span class="title-s">Profile: </span> <span>Software Developer In Test</span></p>
-                      <p><span class="title-s">Email: </span> <span>vishalbalupatil@gmail.com</span></p>
-                      <p><span class="title-s">Phone: </span> <span>+91 9972794151</span></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-mf">
-                  <p class="title-s">Programming Skill</p>
-                  <span>Java </span> <span class="pull-right">90%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Python  </span> <span class="pull-right">75%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>JavaScript </span> <span class="pull-right">60%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>C/C++ </span> <span class="pull-right">60%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="90" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="about-me pt-4 pt-md-0">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      About me 🙋🏻
-                    </h5>
-                  </div>
-                  <p class="lead">
-                      Experienced and Certified Software Developer In Test, SDET Architect, QA Engineer with demonstrated history of working in service and product-based companies. 
-                  </p>
-                
-                  <p class="lead">
-                   Ability to manage multiple automation projects on multiple automation tools, manage the complete automation phases from Initiation, Planning, Execution, Controlling, and Reporting.
-                     </p>
-                      <p class="lead">
-                  Ability to establish and manage manual testing, QA community, and create innovative, efficient testing solutions.
-                     </p>
-               <p class="lead">
-    
-                     </p>
-                </div>
-
-              </div>
-            </div>
+      <!-- Web3 Side -->
+      <div class="hero-half web3-side">
+        <div class="hero-half-overlay"></div>
+        <div class="hero-half-content" data-aos="fade-left" data-aos-duration="1200">
+          <div class="domain-icon">
+            <svg viewBox="0 0 100 100" class="blockchain-svg">
+              <rect x="15" y="20" width="20" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="40" y="20" width="20" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="65" y="20" width="20" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="35" y1="27" x2="40" y2="27" stroke="currentColor" stroke-width="2"/>
+              <line x1="60" y1="27" x2="65" y2="27" stroke="currentColor" stroke-width="2"/>
+              <polygon points="50,45 35,62 50,72 65,62" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="50" y1="45" x2="50" y2="72" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <line x1="35" y1="62" x2="65" y2="62" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <circle cx="20" cy="85" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="50" cy="85" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="80" cy="85" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="25" y1="85" x2="45" y2="85" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <line x1="55" y1="85" x2="75" y2="85" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            </svg>
           </div>
+          <h2 class="domain-label">WEB3 & BLOCKCHAIN</h2>
+          <p class="domain-desc">Smart Contracts | DeFi | Crypto | Decentralized Apps | Web3 Security</p>
         </div>
+        <div class="floating-elements">
+          <div class="float-item float-1">ETH</div>
+          <div class="float-item float-2">DeFi</div>
+          <div class="float-item float-3">DAO</div>
+          <div class="float-item float-4">NFT</div>
+        </div>
+      </div>
+
+      <!-- Center Divider -->
+      <div class="hero-center-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circle">
+          <span class="divider-ampersand">&amp;</span>
+        </div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+
+    <!-- Hero Bottom Content -->
+    <div class="hero-bottom">
+      <div class="hero-name-container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="glitch-wrapper">
+          <h1 class="hero-name glitch" data-text="VISHAL PATIL">VISHAL PATIL</h1>
+        </div>
+        <div class="hero-tagline">
+          <span class="tagline-text" id="typewriter"></span>
+          <span class="cursor">|</span>
+        </div>
+      </div>
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1500">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to Explore</span>
       </div>
     </div>
   </section>
 
-<section id="service" class="services-mf route">
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="section about-section">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              EXPERIENCE 🧔🏻
-            </h3>
-            <p class="subtitle-a">
-            </p>
-            <div class="line-mf"></div>
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          About Me
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-container" data-aos="fade-right" data-aos-duration="1000">
+          <div class="about-image-frame">
+            <img src="img/ABC.jpg" alt="Vishal Patil" class="about-image">
+            <div class="image-border-animation"></div>
+          </div>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <span class="info-label">Name</span>
+              <span class="info-value">Vishal Patil</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Profile</span>
+              <span class="info-value">AI & Web3 Engineer</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Email</span>
+              <span class="info-value">vishalbalupatil@gmail.com</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Location</span>
+              <span class="info-value">Bangalore, India</span>
+            </div>
           </div>
         </div>
-      </div>
-        <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-
-            <div class="Company-1">
-     
-              <h5 class="company-title1 ion-briefcase" >
-       Current Organisation:-  <P class= "text-h"> PeopleGrove Technologies. </P>
-             </h5>
-
-             <h5 class="s-description1 text-left ion-man">
-               &nbsp;Role:- <P class= "text-h"> QA Automation Engineer. </P>
-             </h5>
-              <h5 class="s-description1 text-left ion-ios-time">
-              Duration:- <P class= "text-h"> April 2021 to present. </P>
-             </h5>
-             <h5 class="s-description1 text-left ion-ios-cloud">
-               Domains:- <P class= "text-h">PeopleGrove Internal Project . </P>
-             </h5>
-            <h5 class="s-description1 text-left ion-bug">
-             Responsibilities:- <P class= "text-h"> 
-              Working as an Automation test engineer primarily and also Manual test engineer.
-              Creation of new automation scripts using Cucumber java selenium framework.
-              </P>
-            
-                 <pre class="tab1"></pre>
-                 <pre class="tab1"></pre>
-                 <pre class="tab1"></pre>
-
-            </h5>
-            <h3 class ="line text-center">--------------------------------------------</h3>
-
-        </div>
+        <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+          <div class="about-text-block">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">about_vishal.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p class="terminal-line"><span class="terminal-prompt">$</span> cat about.txt</p>
+              <p class="terminal-output">
+                Experienced Software Engineer and SDET Architect with a demonstrated history of working across AI and Blockchain domains. 
+                Passionate about building intelligent systems powered by Machine Learning and deploying decentralized applications on Web3.
+              </p>
+              <p class="terminal-output">
+                Skilled in developing automation frameworks, AI/ML testing pipelines, smart contract auditing, and full-stack dApp development.
+                Bridging the gap between Artificial Intelligence and Blockchain technology.
+              </p>
+              <p class="terminal-output">
+                Currently exploring the intersection of AI agents and decentralized protocols to build the future of autonomous systems.
+              </p>
+              <p class="terminal-line"><span class="terminal-prompt">$</span> <span class="cursor-blink">_</span></p>
+            </div>
+          </div>
           
-            <div class="Company-1">
-     
-               <h5 class="company-title1 ion-briefcase" >
-              Previous Organisation:-  <P class= "text-h"> Instamojo Technology Pvt Ltd, Bangalore. </P>
-              </h5>
-
-              <h5 class="s-description1 text-left ion-man">
-                &nbsp;Role:- <P class= "text-h"> QA Engineer. </P>
-              </h5>
-               <h5 class="s-description1 text-left ion-ios-time">
-               Duration:- <P class= "text-h"> March 2020 to April 2021. </P>
-              </h5>
-              <h5 class="s-description1 text-left ion-ios-cloud">
-                Domains:- <P class= "text-h">Digital Payment Gateway, E-Commerce Store. </P>
-              </h5>
-             <h5 class="s-description1 text-left ion-bug">
-              Responsibilities:- <P class= "text-h"> 
-                 Working as both an Automation and Manual QA, I was involved in designing of Automation Framework (end to end) for different phases of Instamojo's Payments and Mojo Commerce Store, BackEnd API Automation (CRUD/REST operations, Data migration automation).
-               </P>
-             
-                  <pre class="tab1"></pre>
-                  <pre class="tab1"></pre>
-                  <pre class="tab1"></pre>
-
-             </h5>
-             <h3 class ="line text-center">--------------------------------------------</h3>
-
-         </div>
-               <div class="Company-2">
-                  <pre class="tab1"></pre>
-               <h5 class="company-title1 ion-briefcase"" >
-               Previous Organisation:-  <P class= "text-h"> Innowave GDU India Pvt LTD Bangalore. </P>
-              </h5>
-              <h5 class="s-description1 text-left ion-man">
-              &nbsp;  Role:- <P class= "text-h"> Automation Test Engineer. </P>
-              </h5>
-               <h5 class="s-description1 text-left ion-ios-time">
-                Duration:- <P class= "text-h"> Dec 2018 to March 2020. </P>
-              </h5>
-
-              <h5 class="s-description1 text-left ion-ios-cloud">
-                Domains:- <P class= "text-h">OTT Platform, E-Learning, Salesforce Sales, Service, and CPQ Cloud </P>
-              </h5>
-              <h5 class="s-description1 text-left ion-bug">
-               Responsibilities:- <P class= "text-h"> 
-                    Worked as an Automation and Manual test engineer on multiple projects like Akademe, Hovi, Vodafone, QSS 2.0 for clients like Binate, Nokia, Vodafone, and Volvo.
-                    Involved in developing the automation framework, writing test cases, test scripts.
-                      <pre class="tab1"></pre>
-                      <pre class="tab1"></pre>
-             </h5>
-              </div>
-            </div>        
-     </div>
-     </div>
-      </div>
-    </div>
-    
-  </section>
-  <!--/ Section Services Star /-->
-  <section id="service" class="services-mf route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Skills 🛠
-            </h3>
-            <p class="subtitle-a">
-            </p>
-            <div class="line-mf"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-code-working"></i></span>
+          <div class="stats-grid">
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="stat-number counter" data-target="6">0</div>
+              <div class="stat-label">Years Experience</div>
+              <div class="stat-icon"><i class="fas fa-clock"></i></div>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Automation Framework Development</h2>
-              <p class="s-description text-left">
-            ● Data-Driven Framework, Hybrid, &nbsp;&nbsp;&nbsp;Keyword Driven, Page Object Model.</p>
-          <p class="s-description text-left"> ● Selenium WebDriver, Selenium Grid.</p>
-             <p class="s-description text-left">
-            ● Java Selenium, Python Selenium.</p>
-               <p class="s-description text-left"> ● Cucumber (BDD) Framework,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; Robot Framework (RPA). </p>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="stat-number counter" data-target="10">0</div>
+              <div class="stat-label">Projects Completed</div>
+              <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-bug"></i></span>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="stat-number counter" data-target="8">0</div>
+              <div class="stat-label">Technologies</div>
+              <div class="stat-icon"><i class="fas fa-cogs"></i></div>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">web application testing</h2>
-              <pre class="tab1"></pre> </p> 
-              <pre class="tab1"></pre> </p> 
-
-                 <p class="s-description text-left">
-             ● Web UI Testing   </p>
-              <p class="s-description text-left">
-              ● Web Integration Testing</p>
-                 <p class="s-description text-left">
-              ● Web API's Testing.  </p>
-                 <p class="s-description text-left">                            
-              ● Functional / Non Functional Testing (Performance & Security Testing) 
-              <pre class="tab1"></pre> </p> 
-                                        
-            </div>
-
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">Mobile app testing</h2>
- 
-              <pre class="tab1"></pre> </p> 
-              <pre class="tab1"></pre> </p> 
-              <p class="s-description text-left">
-               ● iOS and Android Device Testing.
-              </p>
-              <p class="s-description text-left">
-              ● Native/Hybrid/Browser Apps Testing </p>
-              <p class="s-description text-left">
-              ● Appium, Selendroid Mobile Test Automation
-             <pre class="tab1"></pre>  <pre class="tab2"></pre> <pre class="tab3"></pre> 
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-briefcase"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">DATABASE TESTING </h2>
-              <pre class="tab1"></pre> </p> 
-              <p class="s-description text-left">
-              ● Relational, Non-Relational Database Testing
-              </p>
-              <p class="s-description text-left">
-              ● Oracle, PostgreSQL, MySQL, MongoDB, Amazon DynamoDB.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-merge"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">DevOps</h2>
-              <pre class="tab1"></pre> </p> 
-              <p class="s-description text-left">
-               ● Continuous Integration and Continuous Delivery [CI/CD].
-              </p>
-              <p class="s-description text-left">
-               ● Jenkins, Bamboo, CircleCI, AWS CodeBuild.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-stats-bars"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">AI/ML Testing</h2>
-              <pre class="tab1"></pre> </p> 
-              <p class="s-description text-left">
-               ● Algorithms Testing, Data Verification.
-              </p>
-                <p class="s-description text-left">
-               ● Smart Interaction Testing, IoT Testing.
-              </p>
-               <p class="s-description text-left">
-               ● AI-Testing Tools, InnSpect, Test.ai.
-              </p>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="stat-number counter" data-target="6">0</div>
+              <div class="stat-label">Clients Served</div>
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--/ Section Services End /-->
 
-
-  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
-    <div class="overlay-mf"></div>
+  <!-- ===================== EXPERIENCE SECTION ===================== -->
+  <section id="experience" class="section experience-section">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">7</p>
-              <span class="counter-text">WORKS COMPLETED</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"> <i class="ion-ios-calendar-outline"></i> </span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">4</p>
-              <span class="counter-text">YEARS OF EXPERIENCE</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-people"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">6</p>
-              <span class="counter-text">TOTAL CLIENTS</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">4</p>
-              <span class="counter-text">AWARD WON</span>
-            </div>
-          </div>
-        </div>
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Experience
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
       </div>
-    </div>
-  </div>
-
-  <!--/ Section Portfolio Star /-->
-  <section id="work" class="portfolio-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Projects 🧑🏻‍💻
-            </h3>
-            <p class="subtitle-a">
-              Click on the images below to know more.
-            </p>
-            <div class="line-mf"></div>
+      
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-           <h2 class="w-title"><b> 1- Akademe.co</b></h2>
-          <div class="work-box">
-            <a href="img/work-11.png" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-111.jpg" alt="" class="img-fluid">
+          <div class="timeline-card">
+            <div class="card-glow"></div>
+            <div class="timeline-header">
+              <div class="timeline-company">
+                <h3>PeopleGrove Technologies</h3>
+                <span class="timeline-badge ai-badge">AI & Automation</span>
               </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                   
-                    <div class="w-more">
-                      <span class="w-ctegory"><b>UI/Integration/API Framework development </b></span> / <span class="w-date">DEC 2018 to March 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-           <h2 class="w-title"><b>2- HOVI-Nokia</b></h2>
-          <div class="work-box">
-            <a href="img/work-12.png" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-112.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                   
-                    <div class="w-more">
-                      <span class="w-ctegory"><b>Web automation testing, API testing, Android/ios app testing</b> </span> / <span class="w-date">DEC 2018 to March 2019</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h2 class="w-title"><b>3- Vodafone</b></h2>
-          <div class="work-box">
-            <a href="img/work-13.png" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-113.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    
-                    <div class="w-more">
-                      <span class="w-ctegory"><b>Web automation testing,API testing,Android/ios app testing </b></span> / <span class="w-date">April 2019 to August 2019</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h2 class="w-title"><b> 4- Volvo QSS 2.0 Billing</b> </h2>
-          <div class="work-box">
-            <a href="img/work-14.png" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-114.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    
-                    <div class="w-more">
-                      <span class="w-ctegory"><b>Salesforce testing,Salesforce service, cpq, and sales cloud</b></span> / <span class="w-date">Sept 2019 to March 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h2 class="w-title"><b>5-Instamojo payments & E-commerce</b></h2>
-          <div class="work-box">
-            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-2.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    
-                    <div class="w-more">
-                      <span class="w-ctegory">Payment gateway testing, e-commerce store </span> / <span class="w-date">April 2020 to present </span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h2 class="w-title"><b>6-PeopleGrove's student and alumni management Program</b></h2>
-          <div class="work-box">
-            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-1.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    
-                    <div class="w-more">
-                      <span class="w-ctegory"> Ed-Tech Domain, Education Domain</span> / <span class="w-date">April 2021 to present </span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-     <!--   <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/work-6.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div> -->
-        </div> 
-        
-      </div>
-    </div>
-  </section>
-  <!--/ Section Portfolio End /-->
-
-
-  <!--/ Section Testimonials Star /-->
-  <div class="testimonials paralax-mf bg-image" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="testimonial-mf" class="owl-carousel owl-theme">
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/user.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Martin Erasmus </span>
-                      <span class="note1"  >Salesforce PM,</span>
-
-                       <span class="note1"> March 31, 2020. Martin managed Vishal directly</span>
-              </div>
-              <div class="content-test">
-                <p class="description lead">
-                 " Vishal is a knowledgeable resource who hit the ground running. He knows the Salesforce product and very quickly picked up on our project requirements (a very complex CPQ project for Volvo Construction).
-
-With a proactive attitude, Vishal was up and running on VSTS; writing test cases from the onset of the project. He gained knowledge of the system by himself and did not need any hand-holding or training.
-
-Being remote and the only tester on the project, Vishal worked independently overcoming any obstacles even though isolated.
-
-Although adrift from the team in a distributed matrix managed environment, Vishal was fully integrated with the team and was a key player.
-
-It was the results delivered that would make it clear that he was fundamental to the success we have achieved to date.
-
-We would happily work with Vishal if given the opportunity again; he was well respected by, client, team and management."
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+              <div class="timeline-meta">
+                <span class="timeline-role"><i class="fas fa-user-astronaut"></i> QA Automation Engineer</span>
+                <span class="timeline-duration"><i class="fas fa-calendar-alt"></i> April 2021 - Present</span>
               </div>
             </div>
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/user.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Yash Goenka </span>
- <span class="note1"> Engineering Manager at Instamojo.
-
-November 3, 2020. Yash managed Vishal directly </span>
-
-
-              </div>
-              <div class="content-test">
-               <p class="description lead">
-            "I worked with Vishal for about 8 months, he came into the organisation at a very crucial period and yet managed to blend in and deliver immediately amidst high pressure. He is a good multitasker with excellent skills on Robot framework. I'd definitely like to work with him again."
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+            <div class="timeline-body">
+              <p>Working as an Automation Test Engineer, building intelligent test automation frameworks using AI-driven testing strategies. Developing and maintaining Cucumber Java Selenium frameworks with smart test generation capabilities.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Selenium</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Cucumber BDD</span>
+                <span class="tech-tag">AI Testing</span>
+                <span class="tech-tag">CI/CD</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!--/ Section Blog Star /-->
-  <section id="blog" class="blog-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a ">
-             Education 👨🏻‍🎓
-            </h3>
-            <p class="subtitle-a">
- 
-            </p>
-            <div class="line-mf"></div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://klescet.ac.in/"><img src="img/engineering.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">BE (E&C)</h6>
-                </div>
+          <div class="timeline-card">
+            <div class="card-glow"></div>
+            <div class="timeline-header">
+              <div class="timeline-company">
+                <h3>Instamojo Technology Pvt Ltd</h3>
+                <span class="timeline-badge web3-badge">FinTech & Payments</span>
               </div>
-              <h3 class="card-title"><a href="https://klescet.ac.in/">KLE Dr. M S Sheshgiri College of Engineering and Technology.</a></h3>
-              <p class="card-description">
-                ✔︎ Graduated engineering in Electronics and Communications.              </p>
+              <div class="timeline-meta">
+                <span class="timeline-role"><i class="fas fa-user-astronaut"></i> QA Engineer</span>
+                <span class="timeline-duration"><i class="fas fa-calendar-alt"></i> March 2020 - April 2021</span>
+              </div>
             </div>
-            <div class="card-footer">
-             <!-- <div class="post-author">
-                <a href="#">
-                  <img src="img/ABC.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author"></span>
-                </a>
-              </div>-->
-              <div class="post-date">
-                <span class="ion-ios-location"></span> Udyambaug, Belgaum.
-                <span class="ion-ios-clock-outline"></span> 2014 to 2018
+            <div class="timeline-body">
+              <p>Designed end-to-end Automation Frameworks for digital payment gateways and e-commerce platforms. Expertise in Backend API Automation including CRUD/REST operations and data migration automation for fintech systems.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Payment Gateway</span>
+                <span class="tech-tag">API Testing</span>
+                <span class="tech-tag">Robot Framework</span>
+                <span class="tech-tag">E-Commerce</span>
+                <span class="tech-tag">FinTech</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="http://gssbgm.edu.in/pu/index.html"><img src="img/puc.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">PUC I & II</h6>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="http://gssbgm.edu.in/pu/index.html">SKE Society's Govindram Seksaria Science College. </a></h3>
-              <p class="card-description">
-             ✔︎ 
-             Completed Pre University course I & II in Science..
-              </p>
-            </div>
-            <div class="card-footer">
-            <!--  <div class="post-author">
-                <a href="#">
-                  <img src="img/ABC.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>-->
-              <div class="post-date">
-           <span class="ion-ios-location"></span> Tilakwadi, Belgaum.
-                <span class="ion-ios-clock-outline"></span> 2011 to 2014
-              </div>
-            </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-single.html"><img src="img/school1.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">School</h6>
-                </div>
+          <div class="timeline-card">
+            <div class="card-glow"></div>
+            <div class="timeline-header">
+              <div class="timeline-company">
+                <h3>Innowave GDU India Pvt Ltd</h3>
+                <span class="timeline-badge ai-badge">Enterprise & Cloud</span>
               </div>
-              <h3 class="card-title"><a href="blog-single.html">Ghatprabha High School & MHPS Salamwadi</a></h3>
-              <p class="card-description">
-           ✔︎ 
-             Completed schooling.
-              <pre class="tab1"></pre>               
-               </p>
+              <div class="timeline-meta">
+                <span class="timeline-role"><i class="fas fa-user-astronaut"></i> Automation Test Engineer</span>
+                <span class="timeline-duration"><i class="fas fa-calendar-alt"></i> Dec 2018 - March 2020</span>
+              </div>
             </div>
-            <div class="card-footer">
-            <!--  <div class="post-author">
-                <a href="#">
-                  <img src="img/ABC.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>-->
-              <div class="post-date">
-                     <span class="ion-ios-location"></span> Salamwadi, Belgaum.
-                <span class="ion-ios-clock-outline"></span> 2001 to 2011 
+            <div class="timeline-body">
+              <p>Worked on multiple enterprise projects including OTT Platforms, E-Learning systems, and Salesforce Cloud solutions for clients like Nokia, Vodafone, and Volvo. Built automation frameworks and testing pipelines from scratch.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Salesforce</span>
+                <span class="tech-tag">OTT Platform</span>
+                <span class="tech-tag">E-Learning</span>
+                <span class="tech-tag">Cloud Testing</span>
+                <span class="tech-tag">Enterprise</span>
               </div>
             </div>
           </div>
@@ -828,138 +347,540 @@ November 3, 2020. Yash managed Vishal directly </span>
       </div>
     </div>
   </section>
-  <!--/ Section Blog End /-->
 
-
-  <!--/ Section Con
-    tact-Footer Star /-->
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section id="skills" class="section skills-section">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="contact-mf">
-            <div id="contact" class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      Send Message Us
-                    </h5>
-                  </div>
-                  <div>
-                      <form action="" method="post" role="form" class="contactForm">
-                      <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
-                      <div class="row">
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validation"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch
-                    </h5>
-                  </div>
-                  <div class="more-info">
-                    <p class="lead">
-                   I love hearing from readers and people from the testing community. I really appreciate you taking the time to get in touch. Please fill out the form below. </p>
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Tech Arsenal
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
 
-                   <p class="lead"> If you are contacting me for a job opportunity proposal or regarding anything please write an email to me.  </p>
+      <div class="skills-tabs">
+        <button class="skill-tab active" data-tab="ai-skills">
+          <i class="fas fa-brain"></i> AI & ML
+        </button>
+        <button class="skill-tab" data-tab="web3-skills">
+          <i class="fas fa-link"></i> Web3 & Blockchain
+        </button>
+        <button class="skill-tab" data-tab="dev-skills">
+          <i class="fas fa-code"></i> Development
+        </button>
+        <button class="skill-tab" data-tab="tools-skills">
+          <i class="fas fa-tools"></i> Tools & DevOps
+        </button>
+      </div>
 
-                    <p class="lead"> You may also reach me on LinkedIn and Instagram. I'm looking forward to hearing from you! </p>
-                    </p>
-                    <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> Bangalore,India</li>
-                      <li><span class="ion-ios-telephone"></span> +91 99727941451</li>
-                      <li><span class="ion-email"></span>vishalbalupatil@gmail.com</li>
-                    </ul>
-                  </div>
-                  <div class="socials">
-                    <ul>
-                      <li><a href="https://www.linkedin.com/in/vishaaal-patil/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                      <li><a href="https://www.instagram.com/vishaaal._.patil/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href="https://www.facebook.com/profile.php?id=100002729868737"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-          
-                    </ul>
-                  </div>
-                </div>
+      <div class="skills-content">
+        <!-- AI Skills -->
+        <div class="skill-panel active" id="ai-skills">
+          <div class="skill-cards-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-brain"></i></div>
+              <h4>Machine Learning</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-network-wired"></i></div>
+              <h4>Deep Learning</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-language"></i></div>
+              <h4>NLP / LLMs</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-eye"></i></div>
+              <h4>Computer Vision</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-robot"></i></div>
+              <h4>AI Test Automation</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="skill-card-icon ai-glow"><i class="fas fa-chart-line"></i></div>
+              <h4>Data Science</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web3 Skills -->
+        <div class="skill-panel" id="web3-skills">
+          <div class="skill-cards-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-card-icon web3-glow"><i class="fab fa-ethereum"></i></div>
+              <h4>Ethereum / Solidity</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="82"></div></div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-card-icon web3-glow"><i class="fas fa-file-contract"></i></div>
+              <h4>Smart Contracts</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-card-icon web3-glow"><i class="fas fa-coins"></i></div>
+              <h4>DeFi Protocols</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="75"></div></div>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-card-icon web3-glow"><i class="fas fa-cubes"></i></div>
+              <h4>Web3.js / Ethers.js</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="78"></div></div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-card-icon web3-glow"><i class="fas fa-shield-alt"></i></div>
+              <h4>Smart Contract Auditing</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="77"></div></div>
+              <span class="skill-percent">77%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="skill-card-icon web3-glow"><i class="fas fa-exchange-alt"></i></div>
+              <h4>Crypto & Tokenomics</h4>
+              <div class="skill-bar"><div class="skill-fill web3-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dev Skills -->
+        <div class="skill-panel" id="dev-skills">
+          <div class="skill-cards-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-card-icon dev-glow"><i class="fab fa-python"></i></div>
+              <h4>Python</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="90"></div></div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-card-icon dev-glow"><i class="fab fa-java"></i></div>
+              <h4>Java</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="90"></div></div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-card-icon dev-glow"><i class="fab fa-js-square"></i></div>
+              <h4>JavaScript / TypeScript</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-card-icon dev-glow"><i class="fas fa-database"></i></div>
+              <h4>SQL / NoSQL Databases</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="85"></div></div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-card-icon dev-glow"><i class="fas fa-server"></i></div>
+              <h4>REST APIs</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="88"></div></div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="skill-card-icon dev-glow"><i class="fab fa-react"></i></div>
+              <h4>React / Web Dev</h4>
+              <div class="skill-bar"><div class="skill-fill dev-fill" data-width="75"></div></div>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Skills -->
+        <div class="skill-panel" id="tools-skills">
+          <div class="skill-cards-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-card-icon tools-glow"><i class="fab fa-docker"></i></div>
+              <h4>Docker / Containers</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="82"></div></div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-card-icon tools-glow"><i class="fab fa-jenkins"></i></div>
+              <h4>Jenkins / CI-CD</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="88"></div></div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-card-icon tools-glow"><i class="fab fa-aws"></i></div>
+              <h4>AWS Cloud</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="78"></div></div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-card-icon tools-glow"><i class="fab fa-git-alt"></i></div>
+              <h4>Git / Version Control</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="92"></div></div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-card-icon tools-glow"><i class="fas fa-vial"></i></div>
+              <h4>Selenium / Appium</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="95"></div></div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="skill-card-icon tools-glow"><i class="fas fa-chart-bar"></i></div>
+              <h4>Monitoring & Analytics</h4>
+              <div class="skill-bar"><div class="skill-fill tools-fill" data-width="80"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Projects
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon ai-glow"><i class="fas fa-brain"></i></div>
+              <h3>AI-Powered Test Automation</h3>
+              <div class="project-category">
+                <span class="cat-ai">AI</span>
+                <span class="cat-automation">Automation</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Built intelligent test automation frameworks leveraging AI for smart test generation, self-healing locators, and predictive test analytics at PeopleGrove.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Selenium</span><span>ML</span><span>NLP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon web3-glow"><i class="fas fa-wallet"></i></div>
+              <h3>DeFi Payment Gateway Testing</h3>
+              <div class="project-category">
+                <span class="cat-web3">Web3</span>
+                <span class="cat-fintech">FinTech</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Designed comprehensive testing frameworks for Instamojo's digital payment gateway and e-commerce platform, ensuring secure financial transactions.</p>
+              <div class="project-tech">
+                <span>API Testing</span><span>Robot Framework</span><span>Payments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon ai-glow"><i class="fas fa-satellite-dish"></i></div>
+              <h3>Akademe E-Learning Platform</h3>
+              <div class="project-category">
+                <span class="cat-ai">AI</span>
+                <span class="cat-edtech">EdTech</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Developed end-to-end UI, Integration, and API automation frameworks for the Akademe e-learning platform, enabling intelligent content delivery testing.</p>
+              <div class="project-tech">
+                <span>Java</span><span>Selenium</span><span>REST API</span><span>BDD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon web3-glow"><i class="fas fa-link"></i></div>
+              <h3>Blockchain Supply Chain</h3>
+              <div class="project-category">
+                <span class="cat-web3">Blockchain</span>
+                <span class="cat-enterprise">Enterprise</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Worked on Volvo's QSS 2.0 Billing system using Salesforce CPQ and Service Cloud, implementing enterprise-grade testing for complex supply chain operations.</p>
+              <div class="project-tech">
+                <span>Salesforce</span><span>CPQ</span><span>Cloud</span><span>Enterprise</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon ai-glow"><i class="fas fa-mobile-alt"></i></div>
+              <h3>HOVI - Nokia OTT Platform</h3>
+              <div class="project-category">
+                <span class="cat-ai">Streaming</span>
+                <span class="cat-mobile">Mobile</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Comprehensive web, API, and mobile testing for Nokia's HOVI OTT streaming platform across Android and iOS platforms.</p>
+              <div class="project-tech">
+                <span>Appium</span><span>iOS</span><span>Android</span><span>API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon web3-glow"><i class="fas fa-shield-alt"></i></div>
+              <h3>Smart Contract Security</h3>
+              <div class="project-category">
+                <span class="cat-web3">Web3</span>
+                <span class="cat-security">Security</span>
+              </div>
+            </div>
+            <div class="project-back">
+              <p>Developing and auditing smart contracts for DeFi protocols, ensuring security best practices and gas optimization in decentralized applications.</p>
+              <div class="project-tech">
+                <span>Solidity</span><span>Hardhat</span><span>Ethers.js</span><span>Security</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>Vishal Patil</strong>. All Rights Reserved</p>
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-                -->
-                Designed by <a href="https://bootstrapmade.com/">VISHAL PATIL</a>
-              </div>
+  </section>
+
+  <!-- ===================== EDUCATION SECTION ===================== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Education
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="edu-card-glow"></div>
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>B.E. Electronics & Communications</h3>
+          <h4>KLE Dr. M S Sheshgiri College of Engineering and Technology</h4>
+          <div class="edu-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Udyambaug, Belgaum</span>
+            <span><i class="fas fa-calendar"></i> 2014 - 2018</span>
+          </div>
+          <p>Graduated in Electronics and Communications Engineering, building a strong foundation in signal processing, embedded systems, and software development.</p>
+        </div>
+
+        <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="edu-card-glow"></div>
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <h3>Pre-University Course (Science)</h3>
+          <h4>SKE Society's Govindram Seksaria Science College</h4>
+          <div class="edu-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Tilakwadi, Belgaum</span>
+            <span><i class="fas fa-calendar"></i> 2011 - 2014</span>
+          </div>
+          <p>Completed Pre-University Course I & II in Science stream, developing analytical thinking and problem-solving capabilities.</p>
+        </div>
+
+        <div class="education-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="edu-card-glow"></div>
+          <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
+          <h3>High School</h3>
+          <h4>Ghatprabha High School & MHPS Salamwadi</h4>
+          <div class="edu-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Salamwadi, Belgaum</span>
+            <span><i class="fas fa-calendar"></i> 2001 - 2011</span>
+          </div>
+          <p>Completed primary and secondary schooling, nurturing early interests in technology and science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS SECTION ===================== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Testimonials
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-glow"></div>
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Vishal is a knowledgeable resource who hit the ground running. He knows the Salesforce product and very quickly picked up on our project requirements. With a proactive attitude, Vishal was up and running, writing test cases from the onset of the project. He was fundamental to the success we have achieved."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="author-info">
+              <h4>Martin Erasmus</h4>
+              <span>Salesforce PM | March 2020</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-glow"></div>
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I worked with Vishal for about 8 months, he came into the organisation at a very crucial period and yet managed to blend in and deliver immediately amidst high pressure. He is a good multitasker with excellent skills. I'd definitely like to work with him again."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="author-info">
+              <h4>Yash Goenka</h4>
+              <span>Engineering Manager at Instamojo | Nov 2020</span>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   </section>
-  <!--/ Section Contact-footer End /-->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">
+          <span class="title-decoration">&lt;</span>
+          Get In Touch
+          <span class="title-decoration">/&gt;</span>
+        </h2>
+        <div class="section-line"></div>
+      </div>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-text">
+            <h3>Let's Build the Future Together</h3>
+            <p>Whether you're looking to integrate AI into your products or build decentralized applications on Web3, I'm excited to collaborate on innovative projects.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Bangalore, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>vishalbalupatil@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 9972794151</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/vishaaal-patil/" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Vishalbalupatil" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/vishaaal._.patil/" target="_blank" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100002729868737" target="_blank" class="social-link" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+        <div class="contact-form-container" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <div class="input-glow"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+              <div class="input-glow"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" placeholder="Subject" required>
+              <div class="input-glow"></div>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+              <div class="input-glow"></div>
+            </div>
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-grid-bg"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>VP<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Building at the intersection of AI & Web3</p>
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">&copy; 2024 Vishal Patil. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#home" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="js/futuristic.js"></script>
 </body>
 </html>
