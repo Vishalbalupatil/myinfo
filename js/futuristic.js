@@ -52,11 +52,13 @@ class ParticleSystem {
       const speedX = (Math.random() - 0.5) * 0.5;
       const speedY = (Math.random() - 0.5) * 0.5;
       
-      // Alternate between AI cyan and Web3 purple colors
-      const isAI = x < this.canvas.width / 2;
-      const color = isAI 
-        ? `rgba(0, ${Math.floor(200 + Math.random() * 55)}, 255, ${0.3 + Math.random() * 0.4})`
-        : `rgba(${Math.floor(150 + Math.random() * 50)}, ${Math.floor(50 + Math.random() * 30)}, 255, ${0.3 + Math.random() * 0.4})`;
+      // Smooth gradient blend of AI cyan and Web3 purple based on position
+      const ratio = x / this.canvas.width; // 0 (left/AI) to 1 (right/Web3)
+      const r = Math.floor(ratio * 150 + Math.random() * 30);
+      const g = Math.floor((1 - ratio) * 200 + Math.random() * 55);
+      const b = 255;
+      const alpha = 0.3 + Math.random() * 0.4;
+      const color = `rgba(${r}, ${g}, ${b}, ${alpha})`;
       
       this.particles.push({ x, y, size, speedX, speedY, color, baseX: x, baseY: y });
     }
@@ -237,11 +239,11 @@ class Typewriter {
 const typewriterElement = document.getElementById('typewriter');
 if (typewriterElement) {
   new Typewriter(typewriterElement, [
-    'AI Engineer & ML Specialist',
-    'Web3 & Blockchain Developer',
-    'Smart Contract Auditor',
-    'SDET Architect',
-    'Building the Future of AI x Web3'
+    'Lead QA Engineer | 7+ Years',
+    'Web3 Cloud & Blockchain Testing',
+    'Automation Test Architect',
+    'AI-Driven Quality Assurance',
+    'Bridging AI x Web3 Innovation'
   ]);
 }
 
@@ -537,7 +539,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-console.log('%c VISHAL PATIL | AI & Web3 Portfolio ', 
+console.log('%c VISHAL PATIL | Lead QA Engineer | AI & Web3 ', 
   'background: linear-gradient(135deg, #00f0ff, #b347ff); color: #0a0a0f; font-family: Orbitron; font-size: 14px; padding: 10px 20px; border-radius: 4px;');
-console.log('%c Built with passion for the future of technology ', 
+console.log('%c 7+ Years | Automation | Web3 | Blockchain ', 
   'color: #00f0ff; font-family: monospace; font-size: 11px;');
